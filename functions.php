@@ -4,7 +4,7 @@
         View::newInstance()->_exportVariableToView('categories', Category::newInstance()->toTree() ) ;
 
         if( osc_count_categories() > 0 ) {
-            echo '<select name="sCategory" data-placeholder="' . __('Select a category...', 'twitter') . '" style="width: auto;" class="chosen-select">' ;
+            echo '<select name="sCategory" data-placeholder="' . __('Seleccione una categoría ...', 'twitter') . '" style="width: auto;" class="chosen-select">' ;
             echo '<option></option>' ;
             while( osc_has_categories() ) {
                 echo '<option value="' . osc_category_name() . '">' . osc_category_name() . '</option>' ;
@@ -24,7 +24,7 @@
         View::newInstance()->_exportVariableToView('categories', Category::newInstance()->toTree() ) ;
 
         if( osc_count_categories() > 0 ) {
-            echo '<select name="sCategory" data-placeholder="' . __('Select a category...', 'twitter') . '" style="width: auto;" class="chosen-select">' ;
+            echo '<select name="sCategory" data-placeholder="' . __('Seleccione una categoría ...', 'twitter') . '" style="width: auto;" class="chosen-select">' ;
             echo '<option></option>' ;
             while( osc_has_categories() ) {
                 echo '<optgroup label="' . osc_category_name() . '">' ;
@@ -45,7 +45,7 @@
         View::newInstance()->_exportVariableToView('list_regions', Search::newInstance()->listRegions('%%%%', '>=', 'region_name ASC') ) ;
 
         if( osc_count_list_regions() > 0 ) {
-            echo '<select name="sRegion" data-placeholder="' . __('Select a region...', 'twitter') . '" style="width: 200px;" class="chosen-select">' ;
+            echo '<select name="sRegion" data-placeholder="' . __('Seleccione una región ...', 'twitter') . '" style="width: 200px;" class="chosen-select">' ;
             echo '<option></option>' ;
             while( osc_has_list_regions() ) {
                 echo '<option value="' . osc_list_region_name() . '">' . osc_list_region_name() . '</option>' ;
@@ -101,10 +101,10 @@
     if ( !function_exists('twitter_user_menu') ) {
         function twitter_user_menu( ) {
             $options = array();
-            $options[] = array('name' => __('Dashboard', 'twitter'), 'url' => osc_user_dashboard_url(), 'class' => osc_is_user_dashboard() ? 'active opt_dashboard' : 'opt_dashboard' ) ;
-            $options[] = array('name' => __('Manage your items', 'twitter'), 'url' => osc_user_list_items_url(), 'class' => osc_is_user_manage_items() ? 'active opt_items' : 'opt_items') ;
-            $options[] = array('name' => __('Manage your alerts', 'twitter'), 'url' => osc_user_alerts_url(), 'class' => osc_is_user_manage_alerts() ? 'active opt_alerts' : 'opt_alerts') ;
-            $options[] = array('name' => __('My account', 'twitter'), 'url' => osc_user_profile_url(), 'class' => osc_is_user_profile() ? 'active opt_dashboard' : 'opt_account' ) ;
+            $options[] = array('name' => __('Tablero de instrumentos', 'twitter'), 'url' => osc_user_dashboard_url(), 'class' => osc_is_user_dashboard() ? 'active opt_dashboard' : 'opt_dashboard' ) ;
+            $options[] = array('name' => __('Gestione sus artículos', 'twitter'), 'url' => osc_user_list_items_url(), 'class' => osc_is_user_manage_items() ? 'active opt_items' : 'opt_items') ;
+            $options[] = array('name' => __('Gestiona tus alertas', 'twitter'), 'url' => osc_user_alerts_url(), 'class' => osc_is_user_manage_alerts() ? 'active opt_alerts' : 'opt_alerts') ;
+            $options[] = array('name' => __('Mi cuenta', 'twitter'), 'url' => osc_user_profile_url(), 'class' => osc_is_user_profile() ? 'active opt_dashboard' : 'opt_account' ) ;
 
             echo '<ul class="tabs">' ;
 
@@ -164,9 +164,9 @@
 
     if( !function_exists('twitter_admin_menu') ) {
         function twitter_admin_menu() {
-            echo '<h3><a href="#">' . __('Twitter theme','twitter') . '</a></h3>
+            echo '<h3><a href="#">' . __('Thema','twitter') . '</a></h3>
             <ul>
-                <li><a href="' . osc_admin_render_theme_url('oc-content/themes/twitter/admin/admin_settings.php') . '">&raquo; ' . __('Settings theme', 'twitter') . '</a></li>
+                <li><a href="' . osc_admin_render_theme_url('oc-content/themes/twitter/admin/admin_settings.php') . '">&raquo; ' . __('Configuraciones de thema', 'twitter') . '</a></li>
             </ul>' ;
         }
 
@@ -193,10 +193,10 @@
             switch ($location) {
                 case ('item'):
                     switch ($section) {
-                        case 'item_add':    $text = __('Publish an item', 'twitter') . ' - ' . osc_page_title() ; break ;
-                        case 'item_edit':   $text = __('Edit your item', 'twitter') . ' - ' . osc_page_title() ; break ;
-                        case 'send_friend': $text = __('Send to a friend', 'twitter') . ' - ' . osc_item_title() . ' - ' . osc_page_title() ; break ;
-                        case 'contact':     $text = __('Contact seller', 'twitter') . ' - ' . osc_item_title() . ' - ' . osc_page_title() ; break ;
+                        case 'item_add':    $text = __('Publicar un artículo', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case 'item_edit':   $text = __('Editar su artículo', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case 'send_friend': $text = __('Enviar a un amigo', 'twitter') . ' - ' . osc_item_title() . ' - ' . osc_page_title() ; break ;
+                        case 'contact':     $text = __('Póngase en contacto con el vendedor', 'twitter') . ' - ' . osc_item_title() . ' - ' . osc_page_title() ; break ;
                         default:            $text = osc_item_title() . ' - ' . osc_page_title() ; break ;
                     }
                 break ;
@@ -226,7 +226,7 @@
                     $b_region   = ($region != '') ;
 
                     if($b_show_all) {
-                        $text = __('Show all items', 'twitter') . ' - ' . $s_page . osc_page_title() ;
+                        $text = __('Mostrar todos los artículos', 'twitter') . ' - ' . $s_page . osc_page_title() ;
                     }
 
                     $result = '' ;
@@ -256,35 +256,35 @@
                     $result = preg_replace('|\s?&raquo;\s$|', '', $result) ;
 
                     if($result == '') {
-                        $result = __('Search', 'twitter') ;
+                        $result = __('Buscar', 'twitter') ;
                     }
 
                     $text = $result . ' - ' . $s_page . osc_page_title() ;
                 break ;
                 case('login'):
                     switch ($section) {
-                        case('recover'): $text = __('Recover your password', 'twitter') . ' - ' . osc_page_title() ;
+                        case('recover'): $text = __('Recuperar su contraseña', 'twitter') . ' - ' . osc_page_title() ;
                         break;
-                        default:         $text = __('Login', 'twitter') . ' - ' . osc_page_title() ;
+                        default:         $text = __('Iniciar sesión', 'twitter') . ' - ' . osc_page_title() ;
                     }
                 break ;
                 case('register'):
-                    $text = __('Create a new account', 'twitter') . ' - ' . osc_page_title() ;
+                    $text = __('Crear una cuenta', 'twitter') . ' - ' . osc_page_title() ;
                 break ;
                 case('user'):
                     switch ($section) {
-                        case('dashboard'):       $text = __('Dashboard', 'twitter') . ' - ' . osc_page_title() ; break ;
-                        case('items'):           $text = __('Manage my items', 'twitter') . ' - ' . osc_page_title() ; break ;
-                        case('alerts'):          $text = __('Manage my alerts', 'twitter') . ' - ' . osc_page_title() ; break ;
-                        case('profile'):         $text = __('Update my profile', 'twitter') . ' - ' . osc_page_title() ; break ;
-                        case('change_email'):    $text = __('Change my email', 'twitter') . ' - ' . osc_page_title() ; break ;
-                        case('change_password'): $text = __('Change my password', 'twitter') . ' - ' . osc_page_title() ; break ;
-                        case('forgot'):          $text = __('Recover my password', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case('dashboard'):       $text = __('Tablero de instrumentos', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case('items'):           $text = __('Administrar mis artículos', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case('alerts'):          $text = __('Administrar mis alertas', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case('profile'):         $text = __('Actualizar mi perfil', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case('change_email'):    $text = __('Cambiar mi correo electrónico', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case('change_password'): $text = __('Cambiar mi contraseña', 'twitter') . ' - ' . osc_page_title() ; break ;
+                        case('forgot'):          $text = __('Recuperar mi contraseña', 'twitter') . ' - ' . osc_page_title() ; break ;
                         default:                 $text = osc_page_title() ; break ;
                     }
                 break ;
                 case('contact'):
-                    $text = __('Contact','twitter') . ' - ' . osc_page_title() ;
+                    $text = __('Contacto','twitter') . ' - ' . osc_page_title() ;
                 break ;
                 default:
                     $text = osc_page_title() ;
@@ -396,8 +396,8 @@
                         'class_prev'         => 'prev',
                         'class_next'         => 'next',
                         'delimiter'          => '',
-                        'text_prev'          => sprintf(__('%s Previous', 'twitter'), '&larr;'),
-                        'text_next'          => sprintf(__('Next %s', 'twitter'), '&rarr;'),
+                        'text_prev'          => sprintf(__('%s Anterior', 'twitter'), '&larr;'),
+                        'text_next'          => sprintf(__('Siguiente %s', 'twitter'), '&rarr;'),
                         'class_selected'     => 'active',
                         'class_non_selected' => '',
                         'force_limits'       => false,
@@ -417,8 +417,8 @@
                         'class_prev'         => 'prev',
                         'class_next'         => 'next',
                         'delimiter'          => '',
-                        'text_prev'          => sprintf(__('%s Previous', 'twitter'), '&larr;'),
-                        'text_next'          => sprintf(__('Next %s', 'twitter'), '&rarr;'),
+                        'text_prev'          => sprintf(__('%s Anterior', 'twitter'), '&larr;'),
+                        'text_next'          => sprintf(__('Siguiente %s', 'twitter'), '&rarr;'),
                         'class_selected'     => 'active',
                         'class_non_selected' => '',
                         'force_limits'       => false,
@@ -438,8 +438,8 @@
                         'class_prev'         => 'prev',
                         'class_next'         => 'next',
                         'delimiter'          => '',
-                        'text_prev'          => sprintf(__('%s Previous', 'twitter'), '&larr;'),
-                        'text_next'          => sprintf(__('Next %s', 'twitter'), '&rarr;'),
+                        'text_prev'          => sprintf(__('%s Anterior', 'twitter'), '&larr;'),
+                        'text_next'          => sprintf(__('Siguiente %s', 'twitter'), '&rarr;'),
                         'class_selected'     => 'active',
                         'class_non_selected' => '',
                         'force_limits'       => false,
@@ -1063,10 +1063,10 @@
                 }
 
                 switch ($section) {
-                    case 'item_add':    $text = $page_title . '<li>' . __('Publish an item', 'twitter') . '</li>'; break;
-                    case 'item_edit':   $text = $page_title . '<li><a href="' . osc_item_url() . '">' . osc_item_title() . '</a>' . $separator .  '</li><li>' . __('Edit your item', 'twitter') . '</li>'; break;
-                    case 'send_friend': $text = $page_title . $category . '<li><a href="' . osc_item_url() . '">' . osc_item_title() . '</a>' . $separator .  '</li><li>' . __('Send to a friend', 'twitter') . '</li>'; break;
-                    case 'contact':     $text = $page_title . $category . '<li><a href="' . osc_item_url() . '">' . osc_item_title() . '</a>' . $separator .  '<li><li>' . __('Contact seller', 'twitter') . '</li>'; break;
+                    case 'item_add':    $text = $page_title . '<li>' . __('Publicar un artículo', 'twitter') . '</li>'; break;
+                    case 'item_edit':   $text = $page_title . '<li><a href="' . osc_item_url() . '">' . osc_item_title() . '</a>' . $separator .  '</li><li>' . __('Editar su artículo', 'twitter') . '</li>'; break;
+                    case 'send_friend': $text = $page_title . $category . '<li><a href="' . osc_item_url() . '">' . osc_item_title() . '</a>' . $separator .  '</li><li>' . __('Enviar a un amigo', 'twitter') . '</li>'; break;
+                    case 'contact':     $text = $page_title . $category . '<li><a href="' . osc_item_url() . '">' . osc_item_title() . '</a>' . $separator .  '<li><li>' . __('Póngase en contacto con el vendedor', 'twitter') . '</li>'; break;
                     default:            $text = $page_title . $category . '<li>' . osc_item_title() . '</li>'; break;
                 }
             break;
@@ -1088,7 +1088,7 @@
                 $b_location = ($b_region || $b_city);
 
                 if($b_show_all) {
-                    $text = $page_title . '<li>' . __('Search', 'twitter') . '</li>' ;
+                    $text = $page_title . '<li>' . __('Buscar', 'twitter') . '</li>' ;
                     break;
                 }
 
@@ -1148,7 +1148,7 @@
                 }
 
                 if($b_pattern) {
-                    $result .= '<li>' . __('Search Results', 'twitter') . ': ' . $pattern  . '</li>' ;
+                    $result .= '<li>' . __('Resultados de la búsqueda', 'twitter') . ': ' . $pattern  . '</li>' ;
                 }
 
                 // remove last separator
@@ -1157,16 +1157,16 @@
             break;
             case('login'):
                 switch ($section) {
-                    case('recover'): $text = $page_title . '<li>' . __('Recover your password', 'twitter') . '</li>';
+                    case('recover'): $text = $page_title . '<li>' . __('Recuperar su contraseña', 'twitter') . '</li>';
                     break;
-                    default:         $text = $page_title . '<li>' . __('Login', 'twitter') . '</li>';
+                    default:         $text = $page_title . '<li>' . __('Iniciar sesión', 'twitter') . '</li>';
                 }
             break;
             case('register'):
-                $text = $page_title . '<li>' . __('Create a new account', 'twitter') . '</li>';
+                $text = $page_title . '<li>' . __('Crear una cuenta', 'twitter') . '</li>';
             break;
             case('contact'):
-                $text = $page_title . '<li>' . __('Contact', 'twitter') . '</li>';
+                $text = $page_title . '<li>' . __('Contacto', 'twitter') . '</li>';
             break;
             default:
             break;

@@ -19,9 +19,9 @@
                     <input type="hidden" name="page" value="login" />
                     <input type="hidden" name="action" value="recover_post" />
                     <fieldset>
-                        <legend><?php _e('Recover your password', 'twitter') ; ?></legend>
+                        <legend><?php _e('Recuperar su contraseña', 'twitter') ; ?></legend>
                         <div class="clearfix">
-                            <label for="s_email"><?php _e('E-mail', 'twitter') ; ?> *</label>
+                            <label for="s_email"><?php _e('Correo electronico', 'twitter') ; ?> *</label>
                             <div class="input">
                                 <input class="xlarge" type="text" value="" name="s_email" id="s_email">
                             </div>
@@ -30,11 +30,11 @@
                             <?php osc_show_recaptcha('recover_password'); ?>
                         </div>
                         <div class="actions">
-                            <button class="btn" type="submit"><?php _e('Send me a new password', 'twitter') ; ?></button>
+                            <button class="btn" type="submit"><?php _e('Envíenme una nueva contraseña', 'twitter') ; ?></button>
                         </div>
                         <div class="clearfix">
                             <div class="input">
-                                <a href="<?php echo osc_user_login_url() ; ?>"><?php _e("Login", 'twitter') ; ?></a> &middot; <a href="<?php echo osc_register_account_url() ; ?>"><?php _e("Register for a free account", 'twitter') ; ?></a>
+                                <a href="<?php echo osc_user_login_url() ; ?>"><?php _e("Iniciar sesión", 'twitter') ; ?></a> &middot; <a href="<?php echo osc_register_account_url() ; ?>"><?php _e("Registrar una cuenta gratuita", 'twitter') ; ?></a>
                             </div>
                         </div>
                     </fieldset>

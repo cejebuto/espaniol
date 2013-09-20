@@ -17,27 +17,27 @@
                     <input type="hidden" name="page" value="contact" />
                     <input type="hidden" name="action" value="contact_post" />
                     <fieldset>
-                        <legend><?php _e('Contact us', 'twitter') ; ?></legend>
+                        <legend><?php _e('Contáctanos', 'twitter') ; ?></legend>
                         <div class="clearfix">
-                            <label for="subject"><?php _e('Subject', 'twitter') ; ?> *</label>
+                            <label for="subject"><?php _e('Asunto', 'twitter') ; ?> *</label>
                             <div class="input">
                                 <input class="xlarge" type="text" value="" name="subject" id="subject">
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="message"><?php _e('Message', 'twitter') ; ?> *</label>
+                            <label for="message"><?php _e('Mensaje', 'twitter') ; ?> *</label>
                             <div class="input">
                                 <textarea class="xlarge" id="message" name="message" rows="6"></textarea>
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="yourName"><?php _e('Your name', 'twitter') ; ?> *</label>
+                            <label for="yourName"><?php _e('Nombre', 'twitter') ; ?> *</label>
                             <div class="input">
                                 <input class="xlarge" type="text" value="" name="yourName" id="yourName">
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="yourEmail"><?php _e('Your e-mail address', 'twitter') ; ?> *</label>
+                            <label for="yourEmail"><?php _e('Tu correo electrónico', 'twitter') ; ?> *</label>
                             <div class="input">
                                 <input class="xlarge" type="text" value="" name="yourEmail" id="yourEmail">
                             </div>
@@ -51,15 +51,15 @@
                             </div>
                         </div>
                         <div class="actions">                            
-                            <button class="btn" type="submit"><?php _e('Send', 'twitter') ; ?></button>
+                            <button class="btn" type="submit"><?php _e('Enviar', 'twitter') ; ?></button>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </div>
         <script type="text/javascript">
-            var text_error_required = '<?php _e('This field is required', 'twitter') ; ?>' ;
-            var text_valid_email    = '<?php _e('Enter a valid e-mail address', 'twitter') ; ?>' ;
+            var text_error_required = '<?php _e('Este campo es obligatorio', 'twitter') ; ?>' ;
+            var text_valid_email    = '<?php _e('Introduzca una dirección e-mail válida', 'twitter') ; ?>' ;
         </script>
         <script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('contact.js') ; ?>"></script>
         <?php osc_current_web_theme_path('footer.php') ; ?>

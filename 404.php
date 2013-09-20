@@ -11,7 +11,7 @@
             <?php twitter_show_flash_message() ; ?>
             <div class="row">
                 <div class="span16 columns">
-                    <h1><?php _e('Page not found', 'twitter') ; ?></h1>
+                    <h1><?php _e('Página no encontrada', 'twitter') ; ?></h1>
                 </div>
             </div>
         </div>

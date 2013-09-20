@@ -13,18 +13,18 @@
                 <ul id="nav">
                     <?php if( osc_users_enabled() ) { ?>
                         <?php if( osc_is_web_user_logged_in() ) { ?>
-                            <li><span class="link"><?php printf(__('Hi %s', 'twitter'), osc_logged_user_name() . '!'); ?></span></li>
-                            <li><a href="<?php echo osc_user_dashboard_url() ; ?>"><?php _e('My account', 'twitter') ; ?></a></li>
-                            <li><a href="<?php echo osc_user_logout_url() ; ?>"><?php _e('Logout', 'twitter') ; ?></a></li>
+                            <li><span class="link"><?php printf(__('Hola %s', 'twitter'), osc_logged_user_name() . '!'); ?></span></li>
+                            <li><a href="<?php echo osc_user_dashboard_url() ; ?>"><?php _e('Mi cuenta', 'twitter') ; ?></a></li>
+                            <li><a href="<?php echo osc_user_logout_url() ; ?>"><?php _e('Salir', 'twitter') ; ?></a></li>
                         <?php } else { ?>
-                            <li><a href="<?php echo osc_user_login_url() ; ?>"><?php _e('Login', 'twitter') ; ?></a></li>
-                            <li><a href="<?php echo osc_register_account_url() ; ?>"><?php _e('Register', 'twitter') ; ?></a></li>
+                            <li><a href="<?php echo osc_user_login_url() ; ?>"><?php _e('Iniciar sesión', 'twitter') ; ?></a></li>
+                            <li><a href="<?php echo osc_register_account_url() ; ?>"><?php _e('Regístrate', 'twitter') ; ?></a></li>
                         <?php } ?>
                     <?php } ?>
                     <?php if ( osc_count_web_enabled_locales() > 1) { ?>
                     <?php osc_goto_first_locale() ; ?>
                     <li class="languages">
-                        <a class="active" href="#"><?php _e('Language', 'twitter'); ?> <?php while ( osc_has_web_enabled_locales() ) { if( osc_locale_code() == osc_current_user_locale()) { ?>(<?php echo osc_locale_field('s_short_name') ; ?>)<?php } } ?></a>
+                        <a class="active" href="#"><?php _e('Idioma', 'twitter'); ?> <?php while ( osc_has_web_enabled_locales() ) { if( osc_locale_code() == osc_current_user_locale()) { ?>(<?php echo osc_locale_field('s_short_name') ; ?>)<?php } } ?></a>
                         <ul class="tabs">
                         <?php $i = 0 ;  ?>
                         <?php osc_goto_first_locale() ; ?>
@@ -35,7 +35,7 @@
                     </li>
                 <?php } ?>
                     <li>
-                        <a class="publish-btn" href="<?php echo osc_item_post_url_in_category() ; ?>"><?php _e("Publish your ad for free", 'twitter'); ?></a>
+                        <a class="publish-btn" href="<?php echo osc_item_post_url_in_category() ; ?>"><?php _e("Publica tu anuncio gratis", 'twitter'); ?></a>
                     </li>
                 </ul>
             </div>

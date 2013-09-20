@@ -8,7 +8,7 @@
                             <input class="xlarge" type="text" name="sPattern" value="">
                             <?php chosen_select_standard() ; ?>
                             <?php chosen_region_select() ; ?>
-                            <button type="submit" class="btn"><?php _e('Search', 'twitter') ; ?></button>
+                            <button type="submit" class="btn"><?php _e('Buscar', 'twitter') ; ?></button>
                         </fieldset>
                     </form>
                 </div>

@@ -6,24 +6,24 @@
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
         <script type="text/javascript">
-            twitter_theme.text_select_subcategory = "<?php _e('Select a subcategory...', 'twitter') ; ?>" ;
+            twitter_theme.text_select_subcategory = "<?php _e('Seleccione una subcategoría ...', 'twitter') ; ?>" ;
             twitter_theme.category_selected_id    = "<?php echo item_selected_category_id() ; ?>" ;
             twitter_theme.subcategory_selected_id = "<?php echo item_selected_subcategory_id() ; ?>" ;
             twitter_theme.max_number_photos       = <?php echo osc_max_images_per_item() ; ?> ;
-            twitter_theme.photo_remove_text       = "<?php _e('Remove', 'twitter') ; ?>" ;
-            twitter_theme.max_images_fields_txt   = "<?php _e('Sorry, you have reached the maximum number of images per ad',  'twitter') ; ?>" ;
+            twitter_theme.photo_remove_text       = "<?php _e('Eliminar', 'twitter') ; ?>" ;
+            twitter_theme.max_images_fields_txt   = "<?php _e('Lo sentimos, usted ha alcanzado el límite máximo de imágenes por anuncio',  'twitter') ; ?>" ;
             twitter_theme.country_select_id       = "<?php echo get_country_id((osc_item() != null) ? osc_item() : array()) ; ?>" ;
             twitter_theme.region_select_id        = "<?php echo get_region_id((osc_item() != null) ? osc_item() : array()) ; ?>" ;
             twitter_theme.city_select_id          = "<?php echo get_city_id((osc_item() != null) ? osc_item() : array()) ; ?>" ;
             twitter_theme.ajax_url                = "<?php echo osc_base_url(true) . '?page=ajax' ; ?>" ;
-            twitter_theme.text_select_country     = "<?php _e('Select a country...', 'twitter') ; ?>" ;
-            twitter_theme.text_select_region      = "<?php _e('Select a region...', 'twitter') ; ?>" ;
-            twitter_theme.text_select_city        = "<?php _e('Select a city...', 'twitter') ; ?>" ;
-            twitter_theme.text_no_regions         = "<?php _e('No regions available', 'twitter') ; ?>" ;
-            twitter_theme.text_no_cities          = "<?php _e('No cities available', 'twitter') ; ?>" ;
+            twitter_theme.text_select_country     = "<?php _e('Seleccione un país ...', 'twitter') ; ?>" ;
+            twitter_theme.text_select_region      = "<?php _e('Seleccione una región ...', 'twitter') ; ?>" ;
+            twitter_theme.text_select_city        = "<?php _e('Seleccione una ciudad ...', 'twitter') ; ?>" ;
+            twitter_theme.text_no_regions         = "<?php _e('No hay zonas disponibles', 'twitter') ; ?>" ;
+            twitter_theme.text_no_cities          = "<?php _e('No hay ciudades disponibles', 'twitter') ; ?>" ;
             twitter_theme.page                    = "edit" ;
             twitter_theme.item_id                 = "<?php echo osc_item_id() ; ?>" ;
-            twitter_theme.delete_photo_txt        = "<?php _e('This action cannot be undone. Are you sure you want to continue?', 'twitter') ; ?>";
+            twitter_theme.delete_photo_txt        = "<?php _e('Esta acción no se puede deshacer. ¿Está seguro que desea continuar?', 'twitter') ; ?>";
         </script>
         <script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('bootstrap-tabs.js') ; ?>"></script>
         <script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('item_form.js') ; ?>"></script>
@@ -44,33 +44,33 @@
                         <input type="hidden" name="id" value="<?php echo osc_item_id() ; ?>" />
                         <input type="hidden" name="secret" value="<?php echo osc_item_secret() ; ?>" />
                         <fieldset>
-                            <h1><?php _e('Update your item', 'twitter') ; ?></h1>
+                            <h1><?php _e('Actualizar su artículo', 'twitter') ; ?></h1>
                             <!-- category input -->
                             <div class="clearfix">
-                                <label><?php _e('Category', 'twitter') ; ?></label>
+                                <label><?php _e('Categoría', 'twitter') ; ?></label>
                                 <div class="input">
-                                    <?php item_category_select( __('Select a category...', 'twitter') ) ; ?>
+                                    <?php item_category_select( __('Seleccione una categoría ...', 'twitter') ) ; ?>
                                 </div>
                             </div>
                             <!-- category input end -->
                             <!-- title and description -->
                             <div class="clearfix">
                                 <?php if( count($aLocales) > 1 ) { ?>
-                                    <?php item_title_description_multilanguage_box(__('Title', 'twitter'), __('Description', 'twitter'), $aLocales) ; ?>
+                                    <?php item_title_description_multilanguage_box(__('Título', 'twitter'), __('Descripción', 'twitter'), $aLocales) ; ?>
                                 <?php } else { ?>
-                                    <?php item_title_description_box(__('Title', 'twitter'), __('Description', 'twitter'), $aLocales) ; ?>
+                                    <?php item_title_description_box(__('Título', 'twitter'), __('Descripción', 'twitter'), $aLocales) ; ?>
                                 <?php } ?>
                             </div>
                             <!-- title and description end -->
                             <?php if( osc_price_enabled_at_items() ) { ?>
                                 <!-- price -->
                                 <div class="clearfix">
-                                    <label for="price"><?php _e('Price', 'twitter') ; ?></label>
+                                    <label for="price"><?php _e('Precio', 'twitter') ; ?></label>
                                     <div class="input">
                                         <?php item_price_input( ) ; ?>
                                         <?php item_currency_select( ) ; ?>
                                         <span class="help-block">
-                                            <?php _e("<strong>Note:</strong> If you are giving away your item, enter a price of 0. If you don't want to publish the price, leave empty the field", 'twitter') ; ?>
+                                            <?php _e("<strong>Nota:</strong> Si usted no esta seguro del costo, introduzca un precio de 0. Si no desea publicar el precio, deje vacio el campo", 'twitter') ; ?>
                                         </span>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
                             <?php } ?>
                             <?php if( osc_images_enabled_at_items() ) { ?>
                                 <!-- photo -->
-                                <h3><?php _e('Photos', 'twitter') ; ?></h3>
+                                <h3><?php _e('Fotos', 'twitter') ; ?></h3>
                                 <div class="clearfix photos">
                                     <?php 
                                         $resources = osc_get_item_resources();
@@ -90,7 +90,7 @@
                                                     <img class="thumbnail quimby_search_image" src="<?php echo osc_base_url() . $r['s_path'] . $r['pk_i_id'] . '_thumbnail.' . $r['s_extension'] ; ?>" />
                                                 </a>
                                                 <span>
-                                                    <a class="btn danger" href="javascript:delete_image(<?php echo $r['pk_i_id'] . ", " . $r['fk_i_item_id'] . ", '" . $r['s_name'] . "', '" . Params::getParam('secret') . "'" ; ?>);" class="delete"><?php _e('Delete', 'twitter') ; ?></a>
+                                                    <a class="btn danger" href="javascript:delete_image(<?php echo $r['pk_i_id'] . ", " . $r['fk_i_item_id'] . ", '" . $r['s_name'] . "', '" . Params::getParam('secret') . "'" ; ?>);" class="delete"><?php _e('Borrar', 'twitter') ; ?></a>
                                                 </span>
                                             </li>
                                             <?php } ?>
@@ -104,24 +104,24 @@
                                     <div class="more-photos">
                                     </div>
                                     <div class="input">
-                                        <a href="javascript://" onclick="return add_photo_field();"><?php _e('Add new photo', 'modern'); ?></a>
+                                        <a href="javascript://" onclick="return add_photo_field();"><?php _e('Añadir nueva foto', 'modern'); ?></a>
                                     </div>
                                 </div>
                                 <!-- photo end -->
                             <?php } ?>
                             <!-- location -->
-                            <h3><?php _e('Location', 'twitter') ?></h3>
+                            <h3><?php _e('Ubicación', 'twitter') ?></h3>
                             <?php item_country_box(__("Country", "twitter"), __("Select a country...", "twitter")) ; ?>
                             <?php item_region_box(__("Region", "twitter"), __("Select a region...", "twitter")) ; ?>
                             <?php item_city_box(__("City", "twitter"), __("Select a city...", "twitter")) ; ?>
                             <div class="clearfix">
-                                <label for="cityArea"><?php _e('Neighborhood', 'twitter') ; ?></label>
+                                <label for="cityArea"><?php _e('Barrio', 'twitter') ; ?></label>
                                 <div class="input">
                                     <?php item_city_area( ) ; ?>
                                 </div>
                             </div>
                             <div class="clearfix">
-                                <label for="address"><?php _e('Address', 'twitter') ; ?></label>
+                                <label for="address"><?php _e('Dirección', 'twitter') ; ?></label>
                                 <div class="input">
                                     <?php item_address( ) ; ?>
                                 </div>
@@ -136,8 +136,8 @@
                             </div>
                             <?php } ?>
                             <div class="actions">
-                                <button class="btn" type="submit"><?php _e('Update', 'twitter') ; ?></button>
-                                <a class="btn" href="javascript:history.back(-1)"><?php _e('Cancel', 'twitter') ; ?></a>
+                                <button class="btn" type="submit"><?php _e('Actualizar', 'twitter') ; ?></button>
+                                <a class="btn" href="javascript:history.back(-1)"><?php _e('Cancelar', 'twitter') ; ?></a>
                             </div>
                         </fieldset>
                     </form>

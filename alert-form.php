@@ -4,11 +4,11 @@
             $.post("<?php echo osc_base_url(true); ?>", { email: $("#alert_email").val(), userid: $("#alert_userId").val(), alert: $("#alert").val(), page: "ajax", action: "alerts" }, 
                 function(data) {
                     if(data == 1) {
-                        alert("<?php _e('You have sucessfully subscribed to the alert', 'modern') ; ?>") ; 
+                        alert("<?php _e('Se ha suscrito con éxito a la alerta', 'modern') ; ?>") ; 
                     } else if(data == -1) { 
-                        alert("<?php _e('Invalid email address', 'twitter') ; ?>") ; 
+                        alert("<?php _e('Dirección de correo electrónico no válida', 'twitter') ; ?>") ; 
                     } else {
-                        alert("<?php _e('There was a problem with the alert', 'twitter') ; ?>") ;
+                        alert("<?php _e('Ocurrió un problema con la alerta', 'twitter') ; ?>") ;
                     }
                 }
             );
@@ -16,7 +16,7 @@
         }) ;
     }) ;
 </script>
-<h4><?php _e('Subscribe to this search', 'twitter') ; ?></h4>
+<h4><?php _e('Suscribirse a esta búsqueda', 'twitter') ; ?></h4>
 <form action="<?php echo osc_base_url(true); ?>" method="post" name="sub_alert" id="sub_alert">
     <fieldset>
         <?php AlertForm::page_hidden() ; ?>
@@ -28,6 +28,6 @@
             <?php AlertForm::user_id_hidden() ; ?>
             <input id="alert_email" type="text" name="alert_email" value="">
         <?php } ?>
-        <button type="submit" class="btn alert-button" ><?php _e('Subscribe now!', 'twitter') ; ?></button>
+        <button type="submit" class="btn alert-button" ><?php _e('Suscríbase ahora!', 'twitter') ; ?></button>
     </fieldset>
 </form>

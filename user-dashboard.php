@@ -12,13 +12,13 @@
                 <div class="span16 columns">
                     <?php twitter_user_menu() ; ?>
                     <?php twitter_show_flash_message() ; ?>
-                    <h2><?php printf(__('Latest items of %s', 'twitter'), osc_logged_user_name()) ; ?></h2>
+                    <h2><?php printf(__('Últimos artículos de %s', 'twitter'), osc_logged_user_name()) ; ?></h2>
                 </div>
             </div>
             <?php if(osc_count_items() == 0) { ?>
             <div class="row">
                 <div class="span16 columns">
-                    <h4><?php _e("You don't have any items yet", 'twitter') ; ?></h4>
+                    <h4><?php _e("Usted no tiene ningún artículo aún", 'twitter') ; ?></h4>
                 </div>
             </div>
             <?php } else { ?>
@@ -26,17 +26,17 @@
                 <div class="row">
                     <div class="span16 columns">
                         <h4><a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h4>
-                        <p class="gray"><?php printf(__('<strong>Publish date</strong>: %s', 'twitter'), osc_format_date( osc_item_pub_date() ) ) ; ?></p>
+                        <p class="gray"><?php printf(__('<strong>Fecha de publicación</strong>: %s', 'twitter'), osc_format_date( osc_item_pub_date() ) ) ; ?></p>
                         <?php
                             $location = array() ;
                             if( osc_item_country() != '' ) {
-                                $location[] = sprintf( __('<strong>Country</strong>: %s', 'twitter'), osc_item_country() ) ;
+                                $location[] = sprintf( __('<strong>País</strong>: %s', 'twitter'), osc_item_country() ) ;
                             }
                             if( osc_item_region() != '' ) {
-                                $location[] = sprintf( __('<strong>Region</strong>: %s', 'twitter'), osc_item_region() ) ;
+                                $location[] = sprintf( __('<strong>Departamento</strong>: %s', 'twitter'), osc_item_region() ) ;
                             }
                             if( osc_item_city() != '' ) {
-                                $location[] = sprintf( __('<strong>City</strong>: %s', 'twitter'), osc_item_city() ) ;
+                                $location[] = sprintf( __('<strong>Ciudad</strong>: %s', 'twitter'), osc_item_city() ) ;
                             }
                             if( count($location) > 0) {
                         ?>
@@ -44,12 +44,12 @@
                         <?php } ?>
                         <p><?php echo osc_highlight( strip_tags( osc_item_description() ) ) ; ?></p>
                         <p>
-                            <strong><a href="<?php echo osc_item_edit_url(); ?>"><?php _e('Edit', 'twitter') ; ?></a></strong>
+                            <strong><a href="<?php echo osc_item_edit_url(); ?>"><?php _e('Editar', 'twitter') ; ?></a></strong>
                             &middot;
-                            <a class="delete" onclick="javascript:return confirm('<?php _e('This action can not be undone. Are you sure you want to continue?', 'twitter') ; ?>')" href="<?php echo osc_item_delete_url() ; ?>" ><?php _e('Delete', 'twitter') ; ?></a>
+                            <a class="delete" onclick="javascript:return confirm('<?php _e('Esta acción no se puede deshacer. ¿Está seguro que desea continuar?', 'twitter') ; ?>')" href="<?php echo osc_item_delete_url() ; ?>" ><?php _e('Borrar', 'twitter') ; ?></a>
                             <?php if( osc_item_is_inactive() ) { ?>
                             &middot;
-                            <a href="<?php echo osc_item_activate_url() ; ?>" ><?php _e('Activate', 'twitter') ; ?></a>
+                            <a href="<?php echo osc_item_activate_url() ; ?>" ><?php _e('Activar', 'twitter') ; ?></a>
                             <?php } ?>
                         </p>
                     </div>

@@ -23,13 +23,13 @@
                 <form action="<?php echo osc_base_url(true); ?>" method="get">
                     <input type="hidden" name="page" value="search" />
                     <fieldset>
-                        <h4><?php _e('Your search', 'twitter') ; ?></h4>
+                        <h4><?php _e('Su búsqueda', 'twitter') ; ?></h4>
                         <div class="clearfix">
                             <input type="text" name="sPattern" id="query" value="<?php echo osc_search_pattern() ; ?>" />
                         </div>
                     </fieldset>
                     <fieldset>
-                        <h4><?php _e('City', 'twitter') ; ?></h4>
+                        <h4><?php _e('Ciudad', 'twitter') ; ?></h4>
                         <div class="clearfix">
                             <input type="text" name="sCity" id="sCity" value="<?php echo osc_search_city() ; ?>" />
                         </div>
@@ -40,7 +40,7 @@
                     ?>
                     <?php if ( osc_count_categories() ) { ?>
                     <fieldset>
-                        <h4><?php _e('Categories', 'twitter') ; ?></h4>
+                        <h4><?php _e('Categorias', 'twitter') ; ?></h4>
                         <div class="clearfix">
                             <ul class="inputs-list">
                             <?php // RESET CATEGORIES IF WE USED THEN IN THE HEADER ?>
@@ -86,7 +86,7 @@
                         }
                     ?>
                     <div class="clearfix">
-                        <button class="btn" type="submit"><?php _e('Apply', 'twitter') ; ?></button>
+                        <button class="btn" type="submit"><?php _e('Aplicar', 'twitter') ; ?></button>
                     </div>
                 </form>
                 <?php osc_alert_form() ; ?>

@@ -53,13 +53,13 @@
                 <!-- item detail -->
                 <div class="span16 columns">
                     <h1><?php if( osc_price_enabled_at_items() ) { ?><small><?php echo osc_item_formated_price() ; ?></small> &middot; <?php } ?><?php echo osc_item_title(); ?></h1>
-                    <p class="no-margin"><?php printf(__('<strong>Published date:</strong> %s %s', 'twitter'), osc_format_date( osc_item_pub_date() ), date(osc_time_format(), strtotime(osc_item_pub_date())) ) ; ?></p>
+                    <p class="no-margin"><?php printf(__('<strong>Fecha de publicación:</strong> %s %s', 'twitter'), osc_format_date( osc_item_pub_date() ), date(osc_time_format(), strtotime(osc_item_pub_date())) ) ; ?></p>
                     <?php if ( osc_item_mod_date() != '' ) { ?>
-                    <p class="no-margin"><?php printf(__('<strong>Modified date:</strong> %s %s', 'twitter'), osc_format_date( osc_item_mod_date() ), date(osc_time_format(), strtotime(osc_item_mod_date())) ) ; ?></p>
+                    <p class="no-margin"><?php printf(__('<strong>Fecha de modificación:</strong> %s %s', 'twitter'), osc_format_date( osc_item_mod_date() ), date(osc_time_format(), strtotime(osc_item_mod_date())) ) ; ?></p>
                     <?php } ?>
                     <?php $item_location = item_detail_location() ; ?>
                     <?php if( count($item_location) > 0 ) { ?>
-                    <p class="no-margin"><?php printf(__('<strong>Location:</strong> %s', 'twitter'), implode(', ', $item_location) ) ; ?></p>
+                    <p class="no-margin"><?php printf(__('<strong>Ubicación:</strong> %s', 'twitter'), implode(', ', $item_location) ) ; ?></p>
                     <?php } ?>
                     <p class="margin-top-10"><?php echo osc_item_description() ; ?></p>
                     <div class="custom_fields">
@@ -87,9 +87,9 @@
                     <?php } ?>
                     <p>
                         <?php if ( !$is_expired && $is_user && $is_can_contact ) { ?>
-                        <a class="btn primary item-contact-button" data-controls-modal="item-contact" data-backdrop="true" data-keyboard="true" href="javascript://"><?php _e('Contact seller', 'twitter') ; ?></a>
+                        <a class="btn primary item-contact-button" data-controls-modal="item-contact" data-backdrop="true" data-keyboard="true" href="javascript://"><?php _e('Póngase en contacto con el vendedor', 'twitter') ; ?></a>
                         <?php } ?>
-                        <a class="btn primary item-share-button" data-controls-modal="item-sendfriend" data-backdrop="true" data-keyboard="true" href="javascript://"><?php _e('Share', 'twitter') ; ?></a>
+                        <a class="btn primary item-share-button" data-controls-modal="item-sendfriend" data-backdrop="true" data-keyboard="true" href="javascript://"><?php _e('Compartir', 'twitter') ; ?></a>
                     </p>
                     <?php osc_run_hook('location') ; ?>
                 </div>
@@ -98,7 +98,7 @@
                 <!-- comments -->
                 <div class="span16 columns comments well">
                     <?php if( $is_can_comment && (osc_item_total_comments() > 0) ) { ?>
-                    <h2><?php _e('Comments', 'twitter'); ?></h2>
+                    <h2><?php _e('Comentarios', 'twitter'); ?></h2>
                     <!-- list comments -->
                     <div class="list-comments">
                         <?php while ( osc_has_item_comments() ) { ?>
@@ -107,7 +107,7 @@
                                 <p><?php echo osc_comment_body() ; ?> </p>
                                 <?php if ( osc_comment_user_id() && (osc_comment_user_id() == osc_logged_user_id()) ) { ?>
                                 <p>
-                                    <a rel="nofollow" href="<?php echo osc_delete_comment_url() ; ?>" title="<?php _e('Delete your comment', 'twitter') ; ?>"><?php _e('Delete', 'twitter') ; ?></a>
+                                    <a rel="nofollow" href="<?php echo osc_delete_comment_url() ; ?>" title="<?php _e('Eliminar tu comentario', 'twitter') ; ?>"><?php _e('Borrar', 'twitter') ; ?></a>
                                 </p>
                                 <?php } ?>
                             </div>
@@ -128,27 +128,27 @@
                         <input type="hidden" name="page" value="item" />
                         <input type="hidden" name="id" value="<?php echo osc_item_id() ; ?>" />
                         <fieldset>
-                            <legend><?php _e('Leave your comment', 'twitter') ; ?></legend>
+                            <legend><?php _e('Deja tu comentario', 'twitter') ; ?></legend>
                             <div class="clearfix">
-                                <label for="comment-authorName"><?php _e('Your name', 'twitter') ; ?></label>
+                                <label for="comment-authorName"><?php _e('Su nombre', 'twitter') ; ?></label>
                                 <div class="input">
                                     <input class="xlarge comment-authorName" type="text" value="<?php echo osc_logged_user_name() ; ?>" name="authorName" id="comment-authorName" />
                                 </div>
                             </div>
                             <div class="clearfix">
-                                <label for="comment-authorEmail"><?php _e('Your e-mail', 'twitter') ; ?></label>
+                                <label for="comment-authorEmail"><?php _e('Tu e-mail', 'twitter') ; ?></label>
                                 <div class="input">
                                     <input class="xlarge comment-authorEmail" type="text" value="<?php echo osc_logged_user_email() ; ?>" name="authorEmail" id="comment-authorEmail" />
                                 </div>
                             </div>
                             <div class="clearfix">
-                                <label for="comment-title"><?php _e('Title', 'twitter') ; ?></label>
+                                <label for="comment-title"><?php _e('Título', 'twitter') ; ?></label>
                                 <div class="input">
                                     <input class="xlarge comment-title" type="text" value="" name="title" id="comment-title" />
                                 </div>
                             </div>
                             <div class="clearfix">
-                                <label for="comment-body"><?php _e('Comment', 'twitter') ; ?></label>
+                                <label for="comment-body"><?php _e('Comentario', 'twitter') ; ?></label>
                                 <div class="input">
                                     <textarea class="xlarge comment-body" id="comment-body" name="body" rows="6"></textarea>
                                 </div>
@@ -159,7 +159,7 @@
                             </div>
                             */ ?>
                             <div class="actions">
-                                <button class="btn" type="submit"><?php _e('Post comment', 'twitter') ; ?></button>
+                                <button class="btn" type="submit"><?php _e('Enviar un comentario', 'twitter') ; ?></button>
                             </div>
                         </fieldset>
                     </form>
@@ -178,30 +178,30 @@
                 <input type="hidden" name="id" value="<?php echo osc_item_id() ; ?>" />
                 <div class="modal-header">
                     <a href="#" class="close">×</a>
-                    <h3><?php _e('Contact publisher', 'twitter') ; ?></h3>
+                    <h3><?php _e('Contacte al editor', 'twitter') ; ?></h3>
                 </div>
                 <div class="modal-body">
                     <?php osc_prepare_user_info() ; ?>
                     <div class="clearfix">
-                        <label for="contact-yourName"><?php _e('Your name', 'twitter') ; ?></label>
+                        <label for="contact-yourName"><?php _e('Tu nombre', 'twitter') ; ?></label>
                         <div class="input">
                             <input class="xlarge contact-yourName" id="contact-yourName" name="yourName" type="text" value="<?php echo osc_logged_user_name(); ?>" />
                         </div>
                     </div>
                     <div class="clearfix">
-                        <label for="contact-yourEmail"><?php _e('Your e-mail', 'twitter') ; ?></label>
+                        <label for="contact-yourEmail"><?php _e('Tu e-mail', 'twitter') ; ?></label>
                         <div class="input">
                             <input class="xlarge contact-yourEmail" id="contact-yourEmail" name="yourEmail" type="text" value="<?php echo osc_logged_user_email();?>" />
                         </div>
                     </div>
                     <div class="clearfix">
-                        <label for="contact-phoneNumber"><?php _e('Phone number', 'twitter') ; ?></label>
+                        <label for="contact-phoneNumber"><?php _e('Celular/Telefono', 'twitter') ; ?></label>
                         <div class="input">
                             <input class="xlarge contact-phoneNumber" id="contact-phoneNumber" name="phoneNumber" type="text" value="" />
                         </div>
                     </div>
                     <div class="clearfix">
-                        <label for="contact-message"><?php _e('Message', 'twitter') ; ?></label>
+                        <label for="contact-message"><?php _e('Mensaje', 'twitter') ; ?></label>
                         <div class="input">
                             <textarea class="xlarge contact-message" id="contact-message" name="message" rows="6"></textarea>
                         </div>
@@ -213,8 +213,8 @@
                     */ ?>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn primary" type="submit"><?php _e('Send', 'twitter') ; ?></button>
-                    <a class="btn item-contact-button-cancel" href="javascript://"><?php _e('Cancel', 'twitter') ; ?></a>
+                    <button class="btn primary" type="submit"><?php _e('Enviar', 'twitter') ; ?></button>
+                    <a class="btn item-contact-button-cancel" href="javascript://"><?php _e('Cancelar', 'twitter') ; ?></a>
                 </div>
             </form>
         </div>
@@ -228,35 +228,35 @@
                 <input type="hidden" name="id" value="<?php echo osc_item_id() ; ?>" />
                 <div class="modal-header">
                     <a href="#" class="close">×</a>
-                    <h3><?php _e('Send to a friend', 'twitter') ; ?></h3>
+                    <h3><?php _e('Enviar a un amigo', 'twitter') ; ?></h3>
                 </div>
                 <div class="modal-body">
                     <div class="clearfix">
-                        <label for="sendfriend-yourName"><?php _e('Your name', 'twitter') ; ?></label>
+                        <label for="sendfriend-yourName"><?php _e('Nombre', 'twitter') ; ?></label>
                         <div class="input">
                             <input class="xlarge sendfriend-yourName" id="sendfriend-yourName" name="yourName" type="text" value="" />
                         </div>
                     </div>
                     <div class="clearfix">
-                        <label for="sendfriend-friendName"><?php _e('Your e-mail', 'twitter') ; ?></label>
+                        <label for="sendfriend-friendName"><?php _e('Tu e-mail', 'twitter') ; ?></label>
                         <div class="input">
                             <input class="xlarge sendfriend-yourEmail" id="sendfriend-yourEmail" name="yourEmail" type="text" value="" />
                         </div>
                     </div>
                     <div class="clearfix">
-                        <label for="sendfriend-friendName"><?php _e("Your friend's name", 'twitter') ; ?></label>
+                        <label for="sendfriend-friendName"><?php _e("Nombre de su amigo", 'twitter') ; ?></label>
                         <div class="input">
                             <input class="xlarge sendfriend-friendName" id="sendfriend-friendName" name="friendName" type="text" value="" />
                         </div>
                     </div>
                     <div class="clearfix">
-                        <label for="sendfriend-friendEmail"><?php _e("Your friend's e-mail", 'twitter') ; ?></label>
+                        <label for="sendfriend-friendEmail"><?php _e("Email de tu amigo", 'twitter') ; ?></label>
                         <div class="input">
                             <input class="xlarge sendfriend-friendEmail" id="sendfriend-friendEmail" name="friendEmail" type="text" value="" />
                         </div>
                     </div>
                     <div class="clearfix">
-                        <label for="sendfriend-message"><?php _e('Message', 'twitter') ; ?></label>
+                        <label for="sendfriend-message"><?php _e('Mensaje', 'twitter') ; ?></label>
                         <div class="input">
                             <textarea class="xlarge sendfriend-message" id="sendfriend-message" name="message" rows="6"></textarea>
                         </div>
@@ -268,8 +268,8 @@
                     */ ?>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn primary" type="submit"><?php _e('Send', 'twitter') ; ?></button>
-                    <a class="btn item-sendfriend-button-cancel" href="javascript://"><?php _e('Cancel', 'twitter') ; ?></a>
+                    <button class="btn primary" type="submit"><?php _e('Enviar', 'twitter') ; ?></button>
+                    <a class="btn item-sendfriend-button-cancel" href="javascript://"><?php _e('Cancelar', 'twitter') ; ?></a>
                 </div>
             </form>
         </div>

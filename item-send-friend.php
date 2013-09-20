@@ -18,9 +18,9 @@
                     <input type="hidden" name="page" value="item" />
                     <input type="hidden" name="id" value="<?php echo osc_item_id(); ?>" />
                     <fieldset>
-                        <legend><?php _e('Send to a friend', 'twitter') ; ?></legend>
+                        <legend><?php _e('Enviar a un amigo', 'twitter') ; ?></legend>
                         <div class="clearfix">
-                            <label><?php _e('Item', 'twitter') ; ?></label>
+                            <label><?php _e('Artículo', 'twitter') ; ?></label>
                             <div class="input">
                                 <span class="inline-help padding-top">
                                     <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title() ; ?></a>
@@ -28,31 +28,31 @@
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="sendfriend-yourName"><?php _e('Your name', 'twitter') ; ?></label>
+                            <label for="sendfriend-yourName"><?php _e('Su nombre', 'twitter') ; ?></label>
                             <div class="input">
                                 <input class="xlarge sendfriend-yourName" id="sendfriend-yourName" name="yourName" type="text" value="">
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="sendfriend-friendName"><?php _e('Your e-mail', 'twitter') ; ?></label>
+                            <label for="sendfriend-friendName"><?php _e('Tu e-mail', 'twitter') ; ?></label>
                             <div class="input">
                                 <input class="xlarge sendfriend-yourEmail" id="sendfriend-yourEmail" name="yourEmail" type="text" value="">
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="sendfriend-friendName"><?php _e("Your friend's name", 'twitter') ; ?></label>
+                            <label for="sendfriend-friendName"><?php _e("Nombre de su amigo", 'twitter') ; ?></label>
                             <div class="input">
                                 <input class="xlarge sendfriend-friendName" id="sendfriend-friendName" name="friendName" type="text" value="">
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="sendfriend-friendEmail"><?php _e("Your friend's e-mail", 'twitter') ; ?></label>
+                            <label for="sendfriend-friendEmail"><?php _e("Email de tu amigo", 'twitter') ; ?></label>
                             <div class="input">
                                 <input class="xlarge sendfriend-friendEmail" id="sendfriend-friendEmail" name="friendEmail" type="text" value="">
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="sendfriend-message"><?php _e('Message', 'twitter') ; ?></label>
+                            <label for="sendfriend-message"><?php _e('Mensaje', 'twitter') ; ?></label>
                             <div class="input">
                                 <textarea class="xlarge sendfriend-message" id="sendfriend-message" name="message" rows="6"></textarea>
                             </div>
@@ -61,15 +61,15 @@
                             <?php osc_show_recaptcha(); ?>
                         </div>
                         <div class="actions">
-                            <button class="btn" type="submit"><?php _e('Send', 'twitter') ; ?></button>
+                            <button class="btn" type="submit"><?php _e('Enviar', 'twitter') ; ?></button>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </div>
         <script type="text/javascript">
-            var text_error_required = '<?php _e('This field is required', 'twitter') ; ?>' ;
-            var text_valid_email    = '<?php _e('Enter a valid e-mail address', 'twitter') ; ?>' ;
+            var text_error_required = '<?php _e('Este campo es obligatorio', 'twitter') ; ?>' ;
+            var text_valid_email    = '<?php _e('Introduzca una dirección e-mail válida', 'twitter') ; ?>' ;
         </script>
         <script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('item_sendfriend.js') ; ?>"></script>
         <?php osc_current_web_theme_path('footer.php') ; ?>

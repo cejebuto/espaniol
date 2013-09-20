@@ -21,28 +21,28 @@
                     <input type="hidden" name="userId" value="<?php echo Params::getParam('userId'); ?>" />
                     <input type="hidden" name="code" value="<?php echo Params::getParam('code'); ?>" />
                     <fieldset>
-                        <legend><?php _e('Recover your password', 'twitter') ; ?></legend>
+                        <legend><?php _e('Recuperar su contraseña', 'twitter') ; ?></legend>
                         <div class="clearfix">
-                            <label for="new_password"><?php _e('New pasword', 'twitter') ; ?></label>
+                            <label for="new_password"><?php _e('Nueva pasword', 'twitter') ; ?></label>
                             <div class="input">
                                 <input class="large" type="password" value="" name="new_password" id="new_password">
                             </div>
                         </div>
                         <div class="clearfix">
-                            <label for="new_password2"><?php _e('Repeat new pasword', 'twitter') ; ?></label>
+                            <label for="new_password2"><?php _e('Repita nueva pasword', 'twitter') ; ?></label>
                             <div class="input">
                                 <input class="large" type="password" value="" name="new_password2" id="new_password2">
                             </div>
                         </div>
                         <div class="actions">
-                            <button class="btn" type="submit"><?php _e('Change password', 'twitter') ; ?></button>
+                            <button class="btn" type="submit"><?php _e('Cambiar contraseña', 'twitter') ; ?></button>
                         </div>
                     </fieldset>
                  </form>
             </div>
         </div>
         <script type="text/javascript">
-            var text_error_required = '<?php _e('This field is required', 'twitter') ; ?>' ;
+            var text_error_required = '<?php _e('Este campo es obligatorio', 'twitter') ; ?>' ;
         </script>
         <script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('forgot_password.js') ; ?>"></script>
         <?php osc_current_web_theme_path('footer.php') ; ?>

@@ -1,20 +1,20 @@
     
 <?php if( osc_count_items() == 0) { ?>
     <div class="search-header span11 columns">
-        <h1><?php _e('Search results', 'twitter') ; ?></h1>
+        <h1><?php _e('Resultados de la búsqueda', 'twitter') ; ?></h1>
     </div>
     <div class="span11 columns">
         <?php if( osc_search_pattern() == '' ) { ?>
-            <h5><?php _e('There are no results', 'twitter') ; ?></h5>
+            <h5><?php _e('No hay resultados', 'twitter') ; ?></h5>
         <?php } else { ?>
-            <h5><?php printf( __('There are no results matching "%s"', 'twitter'), osc_search_pattern() ) ; ?></h5>
+            <h5><?php printf( __('No hay coincidencias "%s"', 'twitter'), osc_search_pattern() ) ; ?></h5>
         <?php } ?>
     </div>
 <?php } else { ?>
 <div class="search-header span11 columns">
-    <h1><?php _e('Search results', 'twitter') ; ?></h1>
+    <h1><?php _e('Resultados de la búsqueda', 'twitter') ; ?></h1>
     <p class="filters">
-        <?php _e('Sort by', 'modern'); ?>:
+        <?php _e('Ordenar por', 'modern'); ?>:
         <?php $i = 0 ; ?>
         <?php $orders = osc_list_orders();
         foreach($orders as $label => $params) {
@@ -48,17 +48,17 @@
         </div>
         <div class="description">
             <h3><?php if( osc_price_enabled_at_items() ) { ?> <small><strong><?php echo osc_premium_formated_price() ; ?></strong></small> &middot; <?php } ?><a href="<?php echo osc_premium_url() ; ?>"><?php echo osc_premium_title(); ?></a> <span class="label"><a href="<?php echo osc_item_category_url( osc_premium_category_id() ) ; ?>"><?php echo osc_premium_category() ; ?></a></span></h3>
-            <p><?php printf(__('<strong>Publish date</strong>: %s', 'twitter'), osc_format_date( osc_premium_pub_date() ) ) ; ?></p>
+            <p><?php printf(__('<strong>Fecha de publicación</strong>: %s', 'twitter'), osc_format_date( osc_premium_pub_date() ) ) ; ?></p>
             <?php
                 $location = array() ;
                 if( osc_premium_country() != '' ) {
-                    $location[] = sprintf( __('<strong>Country</strong>: %s', 'twitter'), osc_premium_country() ) ;
+                    $location[] = sprintf( __('<strong>País</strong>: %s', 'twitter'), osc_premium_country() ) ;
                 }
                 if( osc_premium_region() != '' ) {
-                    $location[] = sprintf( __('<strong>Region</strong>: %s', 'twitter'), osc_premium_region() ) ;
+                    $location[] = sprintf( __('<strong>Departamento</strong>: %s', 'twitter'), osc_premium_region() ) ;
                 }
                 if( osc_premium_city() != '' ) {
-                    $location[] = sprintf( __('<strong>City</strong>: %s', 'twitter'), osc_premium_city() ) ;
+                    $location[] = sprintf( __('<strong>Ciudad</strong>: %s', 'twitter'), osc_premium_city() ) ;
                 }
 
                 if( count($location) > 0) { ?>
@@ -82,17 +82,17 @@
         </div>
         <div class="description">
             <h3><?php if( osc_price_enabled_at_items() ) { ?> <small><strong><?php echo osc_item_formated_price() ; ?></strong></small> &middot; <?php } ?><a href="<?php echo osc_item_url() ; ?>"><?php echo osc_item_title(); ?></a> <span class="label"><a href="<?php echo osc_item_category_url(osc_item_category_id()) ; ?>"><?php echo osc_item_category() ; ?></a></span> <?php if( osc_item_is_premium() ) { ?> <span class="label success"><?php _e('Premium', 'twitter');  ?></span><?php } ?></h3>
-            <p><?php printf(__('<strong>Publish date</strong>: %s', 'twitter'), osc_format_date( osc_item_pub_date() ) ) ; ?></p>
+            <p><?php printf(__('<strong>Fecha de publicación</strong>: %s', 'twitter'), osc_format_date( osc_item_pub_date() ) ) ; ?></p>
             <?php
                 $location = array() ;
                 if( osc_item_country() != '' ) {
-                    $location[] = sprintf( __('<strong>Country</strong>: %s', 'twitter'), osc_item_country() ) ;
+                    $location[] = sprintf( __('<strong>País</strong>: %s', 'twitter'), osc_item_country() ) ;
                 }
                 if( osc_item_region() != '' ) {
-                    $location[] = sprintf( __('<strong>Region</strong>: %s', 'twitter'), osc_item_region() ) ;
+                    $location[] = sprintf( __('<strong>Departamento</strong>: %s', 'twitter'), osc_item_region() ) ;
                 }
                 if( osc_item_city() != '' ) {
-                    $location[] = sprintf( __('<strong>City</strong>: %s', 'twitter'), osc_item_city() ) ;
+                    $location[] = sprintf( __('<strong>Ciudad</strong>: %s', 'twitter'), osc_item_city() ) ;
                 }
                 if( count($location) > 0) {
             ?>
